@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись в тренажерный зал</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Форма записи в тренажерный зал</h1>
+    
+    <!-- Начало формы -->
+    <form action="/submit_registration" method="post">
+        
+        <!-- Личные данные -->
+        <fieldset>
+            <legend>Личные данные</legend>
+
+            <!-- Имя -->
+            <label for="name">ФИО:</label>
+            <input type="text" id="name" name="name" placeholder="Введите ваше полное имя" required><br><br>
+
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Введите ваш email" required><br><br>
+
+            <!-- Телефон -->
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Введите ваш номер телефона" required><br><br>
+
+            <!-- Пароль для личного кабинета -->
+            <label for="password">Придумайте пароль:</label>
+            <input type="password" id="password" name="password" required><br><br>
+        </fieldset>
+
+        <!-- Выбор услуг -->
+        <fieldset>
+            <legend>Выберите услуги</legend>
+
+            <!-- Тип абонемента -->
+            <label>Тип абонемента:</label><br>
+            <label>
+                <input type="radio" name="subscription" value="monthly" required> Месячный абонемент
+            </label><br>
+            <label>
+                <input type="radio" name="subscription" value="quarterly"> Квартальный абонемент
+            </label><br>
+            <label>
+                <input type="radio" name="subscription" value="annual"> Годовой абонемент
+            </label><br><br>
+
+            <!-- Дополнительные услуги -->
+            <label>Выберите дополнительные услуги:</label><br>
+            <label>
+                <input type="checkbox" id="personal_trainer" name="services" value="personal_trainer"> Персональный тренер
+            </label><br>
+            <label>
+                <input type="checkbox" id="group_classes" name="services" value="group_classes"> Групповые занятия
+            </label><br>
+            <label>
+                <input type="checkbox" id="pool_access" name="services" value="pool_access"> Доступ в бассейн
+            </label><br>
+            <label>
+                <input type="checkbox" id="sauna" name="services" value="sauna"> Сауна
+            </label><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Персональная информация</legend>
+
+            <label for="gender">Пол:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Выберите</option>
+                <option value="male">Мужской</option>
+                <option value="female">Женский</option>
+                <option value="other">Другой</option>
+            </select><br><br>
+
+            <label for="birthdate">Дата рождения:</label>
+            <input type="date" id="birthdate" name="birthdate" required><br><br>
+
+            <label for="photo">Загрузите фото (опционально):</label>
+            <input type="file" id="photo" name="photo" accept="image/*"><br><br>
+
+            <label for="comments">Ваши комментарии:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Укажите пожелания или вопросы"></textarea><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Подтверждение</legend>
+
+            <label>
+                <input type="checkbox" id="agreement" name="agreement" required> Я согласен(а) с <a href="/rules" target="_blank">правилами клуба</a>
+            </label><br><br>
+        </fieldset>
+
+        <input type="submit" value="Записаться">
+        <input type="reset" value="Очистить форму">
+    </form>
+</body>
+</html>
