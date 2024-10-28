@@ -9,35 +9,27 @@
 <body>
     <h1>Форма записи в тренажерный зал</h1>
     
-    <!-- Начало формы -->
     <form action="/submit_registration" method="post">
         
-        <!-- Личные данные -->
         <fieldset>
             <legend>Личные данные</legend>
 
-            <!-- Имя -->
             <label for="name">ФИО:</label>
             <input type="text" id="name" name="name" placeholder="Введите ваше полное имя" required><br><br>
 
-            <!-- Email -->
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="Введите ваш email" required><br><br>
 
-            <!-- Телефон -->
             <label for="phone">Телефон:</label>
             <input type="tel" id="phone" name="phone" placeholder="Введите ваш номер телефона" required><br><br>
 
-            <!-- Пароль для личного кабинета -->
             <label for="password">Придумайте пароль:</label>
             <input type="password" id="password" name="password" required><br><br>
         </fieldset>
 
-        <!-- Выбор услуг -->
         <fieldset>
             <legend>Выберите услуги</legend>
 
-            <!-- Тип абонемента -->
             <label>Тип абонемента:</label><br>
             <label>
                 <input type="radio" name="subscription" value="monthly" required> Месячный абонемент
@@ -49,7 +41,6 @@
                 <input type="radio" name="subscription" value="annual"> Годовой абонемент
             </label><br><br>
 
-            <!-- Дополнительные услуги -->
             <label>Выберите дополнительные услуги:</label><br>
             <label>
                 <input type="checkbox" id="personal_trainer" name="services" value="personal_trainer"> Персональный тренер
